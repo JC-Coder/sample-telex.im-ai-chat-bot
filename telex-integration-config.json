@@ -1,0 +1,54 @@
+{
+  "date": {
+    "created_at": "2024-03-21",
+    "updated_at": "2024-03-21"
+  },
+  "descriptions": {
+    "app_name": "Channel AI Assistant",
+    "app_description": "An AI-powered assistant that can answer questions about channel conversations using context from recent messages.",
+    "app_logo": "https://raw.githubusercontent.com/jccoder/channel-ai-assistant/main/logo.png",
+    "app_url": "https://github.com/jccoder/channel-ai-assistant",
+    "background_color": "#4A90E2"
+  },
+  "target_url": "https://sample-integration-for-telex-app.josephchimezie2003.workers.dev/webhook",
+  "key_features": [
+    "Answer questions about channel conversations using AI",
+    "Uses channel message history as context",
+    "Powered by Google's Gemini AI",
+    "Maintains context of the last 50 messages",
+    "Real-time message processing and storage"
+  ],
+  "settings": [
+    {
+      "label": "channelId",
+      "type": "string",
+      "description": "The ID of the channel to monitor and answer questions about",
+      "required": true
+    },
+    {
+      "label": "messageLimit",
+      "type": "number",
+      "description": "Maximum number of recent messages to use as context (default: 50)",
+      "default": 50,
+      "required": false
+    }
+  ],
+  "endpoints": [
+    {
+      "path": "/webhook",
+      "method": "POST",
+      "description": "Receives channel messages and stores them for context"
+    },
+    {
+      "path": "/ask",
+      "method": "POST",
+      "description": "Endpoint to ask questions about channel content"
+    },
+    {
+      "path": "/health",
+      "method": "GET",
+      "description": "Health check endpoint"
+    }
+  ],
+  "is_active": true
+}
