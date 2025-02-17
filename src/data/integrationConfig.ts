@@ -6,7 +6,7 @@ export const telexGeneratedConfig = {
       created_at: "2024-03-21",
       updated_at: "2024-03-21",
     },
-    integration_category: "modifier",
+    integration_category: "AI & Machine Learning",
     integration_type: "modifier",
     descriptions: {
       app_name: "AI CHAT FOR TELEX CHANNELS",

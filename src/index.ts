@@ -87,8 +87,7 @@ app.post("/webhook", zValidator("json", webhookSchema), async (c) => {
   return c.json(
     {
       status: "success",
-      message: "Message received",
-      content: "Sample content",
+      message: payload?.message || "Message received",
     },
     200
   );
